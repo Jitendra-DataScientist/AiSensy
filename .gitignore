@@ -1,7 +1,10 @@
-__pycache__/
-
 # NVIDEA config:
 config/env_var.py
 
 # python cache:
 config/__pycache__/
+__pycache__/
+
+
+# logs directory
+logs/
