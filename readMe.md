@@ -5,12 +5,6 @@
 - I am not that proficient in JS, though I know it, and can make a simple user interface for this assignment.
 - I am gradually building a web interface using JS, that I would be pushing to this repo gradually.
 
- # Key Improvements:
-
-- improved UI.
-- better error handling in source code.
-- better error logging in source code.
-
 # For running this app locally (you could DIRECTLY use the link in the 2nd bullet point ABOVE):
 
 - Clone this repo's main branch (any changes in instructions for running from other branches will be mentioned in the repective branch's readme).
@@ -23,3 +17,9 @@ nvidia_key = "your_NVIDEA_key"
 - Get the domains from the logs of the above command, and change the API's domain and port in line numbers 4 and 5 in web_app.py.
 - Run the web_app using the command: "streamlit run web_app.py"
 - In order to run the streamlit app on a custom port apart from the default 8501, use the "server.port" argument, for example: "streamlit run web_app.py --server.port 4200".
+
+ # Key Improvements:
+
+- improved UI.
+- better error handling in source code.
+- better error logging in source code.
