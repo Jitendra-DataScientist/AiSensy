@@ -134,7 +134,7 @@ async def api(item: Item):
 
     # Define the system message
     rolemsg = {"role": "system",
-               "content": "Answer the user's question using documents provided in the context. The context contains documents that should hold an answer. Always reference the document ID (in brackets, e.g., [0],[1]) of the document used for a query. Use as many citations and documents as needed to answer the question."}
+               "content": "Answer the user's question using documents provided in the context. The context contains documents that should hold an answer. Never ever reference the document or the document ID (in brackets, e.g., [0],[1]) of the document used for a query in the answer. You could just start your response with 'As per the scrapped content, ...'. Use as many citations and documents as needed to answer the question."}
 
     # Define the messages
     messages = [rolemsg, {"role": "user", "content": f"Documents:\n{context}\n\nQuestion: {query}"}]
@@ -159,3 +159,4 @@ async def api(item: Item):
         print("It is not possible to use an LLM.")
 
     return {"context": list_res, "answer": response}
+

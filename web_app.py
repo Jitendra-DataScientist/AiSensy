@@ -2,12 +2,12 @@ import streamlit as st
 import requests
 
 api_domain = "http://125.63.120.194"
-api_port = "8000"
+api_port = "8018"
 
 INDEX_API_URL = f"{api_domain}:{api_port}/index"
 QUERY_API_URL = f"{api_domain}:{api_port}/api"
 
-st.title("API Interaction UI")
+st.title("URL-Based Q&A Tool")
 
 # Section 1: URL Indexing
 st.header("URL Indexing")
@@ -31,7 +31,7 @@ for i, url in enumerate(st.session_state["urls"]):
     st.session_state["urls"][i] = cols[0].text_input(f"URL {i+1}", value=url, key=f"url_{i}")
     if cols[1].button("❌", key=f"remove_{i}"):
         remove_url(i)
-        st.experimental_rerun()
+        st.rerun()
 
 if st.button("➕ Add URL"):
     add_url()
@@ -56,3 +56,4 @@ if st.button("Submit Query", disabled=not st.session_state["indexing_complete"])
             st.write("**Answer:**", answer)
         else:
             st.error("Failed to fetch answer. Try again.")
+
